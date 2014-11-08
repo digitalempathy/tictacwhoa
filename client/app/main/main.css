@@ -1,0 +1,21 @@
+body {
+    position: relative;
+    width: 960px;
+}
+
+canvas {
+    width: 32%;
+    height: 200px;
+    border: 3px solid black;
+}
+
+.game-container {
+    width: 960px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#game {
+    width: 620px;
+    height: 620px;
+}
