@@ -20,11 +20,22 @@ describe('Controller: MainCtrl', function () {
       $scope: scope
     });
   }));
+});
 
-describe('uniqueNum', function () {
+describe('Getting the unique link', function() {
+  
+  describe('The uniqueNum variable', function () {
 
-  it('should return a random number', function () {
-    expect(typeof(uniqueNum)).toBe('number');
+    it('should return a random number', function () {
+      expect(typeof(uniqueNum)).toBe('number');
+    });
+  });    
+
+  describe('The uniqueLink variable', function(){
+
+    it('should match the current URL', function(){
+      expect(uniqueLink).toMatch(document.URL)
+    });
   });
 });
-});
+

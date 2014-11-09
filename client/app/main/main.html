@@ -1,14 +1,65 @@
 
-
-<div class="container">
+<div ng-app='tictacwhoaApp' ng-controller="GameControl as control" class="container">
+	<div ng-app="">
+  <h1>TicTacWhoa</h1>
+  <div ng-hide="showme">
+	  <p class="description">Click the button to play.</p>
+	  <button href="" ng-click="showme=true">PLAY</button>
+  </div>
+  <!-- <button ng-click="showme=false">Hide</button>  -->
   
-  <div class="title">
-    <h1> Welcome to TicTacWhoa </h1>
+  <div class="wrapper">
+    <p ng-hide="showme"></p>
+    <div ng-show="showme">
+    	 <h3> Push the button below to invite a friend to play. </h3>
+		 <a ng-click="copyToClipboard(uniqueLink)"><button>GET INVITE LINK</button></a>
+		 <div id="game">
+			  <canvas id="box1" onclick="canvasClicked(1)"></canvas>
+			  <canvas id="box2" onclick="canvasClicked(2)"></canvas>
+			  <canvas id="box3" onclick="canvasClicked(3)"></canvas>
+			  <canvas id="box4" onclick="canvasClicked(4)"></canvas>
+			  <canvas id="box5" onclick="canvasClicked(5)"></canvas>
+			  <canvas id="box6" onclick="canvasClicked(6)"></canvas>
+			  <canvas id="box7" onclick="canvasClicked(7)"></canvas>
+			  <canvas id="box8" onclick="canvasClicked(8)"></canvas>
+			  <canvas id="box9" onclick="canvasClicked(9)"></canvas>
+		   </div>  		  
   </div>
+  
+</div>    
 
-  <div class="description">
-    <h3> Click the button to play TicTacWhoa </h3>
-  </div>
 
-  <a href="/game.html"><button>PLAY</button></a>
-</div>
+	<!-- <div id='header'>  
+	  <div class="title">
+	    <h1> TicTacWhoa </h1>
+	  </div>
+
+	  <div  class="description" ng-controller="initGame as startGame">
+	    <h3> Click the button to play</h3>
+	    <a href="" ng-click="playGame=true"><button>PLAY</button></a>
+	  </div>
+	</div>
+
+  
+	<div class="game-container">
+		  
+			  <div ng-hide="playGame" class="description">Stuff</div>
+			  <div ng-show="playGame" class="description">
+			    <h3> Push the button below to invite a friend to play. </h3>
+			    <a ng-click="copyToClipboard(uniqueLink)"><button>GET INVITE LINK</button></a>
+			  </div>
+		
+		   
+		   <div id="game">
+			  <canvas id="box1" onclick="canvasClicked(1)"></canvas>
+			  <canvas id="box2" onclick="canvasClicked(2)"></canvas>
+			  <canvas id="box3" onclick="canvasClicked(3)"></canvas>
+			  <canvas id="box4" onclick="canvasClicked(4)"></canvas>
+			  <canvas id="box5" onclick="canvasClicked(5)"></canvas>
+			  <canvas id="box6" onclick="canvasClicked(6)"></canvas>
+			  <canvas id="box7" onclick="canvasClicked(7)"></canvas>
+			  <canvas id="box8" onclick="canvasClicked(8)"></canvas>
+			  <canvas id="box9" onclick="canvasClicked(9)"></canvas>
+		   </div>  		  
+	</div>	   
+ --></div>
